@@ -27,6 +27,7 @@ export class AppComponent implements OnInit {
   size = 5;
   generatedPages: GeneratedPage[] = [];
 
+
   constructor(
     private _snackBar: MatSnackBar,
     private formBuilder: FormBuilder,
@@ -125,6 +126,12 @@ export class AppComponent implements OnInit {
         this.generateAllPages(this.pageNum);
         this.openSnackBar(MESSAGE.CREATED);
         this.getTarefasWithPagination(this.pageNum);
+
+        //resetar sem validação
+        this.tarefaForm.reset();
+        Object.keys(this.tarefaForm.controls).forEach(key => {
+          this.tarefaForm.controls[key].setErrors(null)
+        });
       });
     }
   }
