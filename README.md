@@ -3,7 +3,7 @@
 <p>Desafio media4all - Projeto desenvolvido back-end (Springboot 3.3.1 e Java) está na branch main e o front-end (Angular 16) está na branch master.</p>
 <h2>Como configurar e executar a aplicação</h2>
 <ol>
-  <li>Primeiro crie um banco de dados no MySQL Workbench, esse é o script: <a href="https://github.com/thiagolyra1/listadetarefa/blob/main/scriptbd" target="_blank">https://github.com/thiagolyra1/listadetarefa/blob/main/scriptbd</a></li>
+  <li>Crie um banco de dados no MySQL Workbench, esse é o script: <a href="https://github.com/thiagolyra1/listadetarefa/blob/main/scriptbd" target="_blank">https://github.com/thiagolyra1/listadetarefa/blob/main/scriptbd</a></li>
   <li>Clone o back-end que se encontra na branch main com esse comando: <code>git clone -b main --single-branch https://github.com/thiagolyra1/listadetarefa.git</code>.</li>
   <li>Importe o projeto na sua IDE de preferência (eu utilizei o IntelliJ IDEA Community).</li>
   <li>Faça o update do projeto maven. (No meu caso eu importei no IntelliJ e segui esses passos -> clicar com botão direito no <code>pom.xml</code>, no último campo tem "adicionar ao Maven", só clicar e vai dar o update).</li>
