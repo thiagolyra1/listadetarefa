@@ -8,7 +8,7 @@
   <li>Verifique se tem e quais versões do node.js, npm e do angular. Com esses comandos no terminal: <code>node --version</code>, <code>npm --version</code> e <code>ng version</code>. As minhas verões: Node - 18.20, npm - 10.7, Angular - 16</li>
   <li>Caso não tenha algum, instale. Após isso, no terminal da IDE digite o comando: <code>npm install</code>.</li>
   <li>Agora só preciamos digitar o comando <code>npm start</code>. Com isso a aplicação já estará rodando, lembrando de está com o mysql e back-end rodando</li>
-  <li>Lembre-se de confirmar as portas corretas do seu MySQL no backend e do backend no Angular.</li>
+  <li>Lembre-se também de confirmar as portas corretas do seu MySQL no backend e do backend no Angular.</li>
   <li>Você está pronto para testar o aplicativo completo. Divirta-se.</li>
 </ol>
 
