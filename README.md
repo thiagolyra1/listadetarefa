@@ -1,16 +1,3 @@
-Lista de Tarefas Web App
-
-Desafio media4all - Projeto desenvolvido back-end (Springboot 3.3.1 e Java) está na branch main e o front-end (Angular 16) está na branch master.
-
-Como configurar e executar a aplicação
-
-1 Primeiro crie um banco de dados no MySQL Workbench, esse é o script: https://github.com/thiagolyra1/listadetarefa/blob/main/scriptbd
-2 Clone o back-end que se encontra na branch main com esse comando: git clone -b main --single-branch https://github.com/thiagolyra1/listadetarefa.git.
-3 Importe o projeto na sua IDE de preferência (eu utilizei o IntelliJ IDEA Community).
-4 Faça o update do projeto maven. (No meu caso eu importei no IntelliJ e segui esses passo -> clicar com botão direito no pom.xm, no último campo tem "adicionar ao Maven", só clicar e vai da o update).
-5 Abra o arquivo "ListadetarefaApplication" (src/main/java/br.com.thiago.listadetarfa) e rode ele com o botão do play.
-6 Falta só clonar o front-end dessa aplicação, vá para esse link e leia o README: https://github.com/thiagolyra1/listadetarefa/tree/master
-
 <h1>Lista de Tarefas Web App</h1>
 
 <p>Desafio media4all - Projeto desenvolvido back-end (Springboot 3.3.1 e Java) está na branch main e o front-end (Angular 16) está na branch master.</p>
