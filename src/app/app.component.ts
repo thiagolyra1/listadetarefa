@@ -70,6 +70,7 @@ export class AppComponent implements OnInit {
       });
   }
 
+  // método para gerar as páginas
   generateAllPages(totalPages: number) {
     this.generatedPages = [];
     for (let i = 0; i < totalPages; i++) {
