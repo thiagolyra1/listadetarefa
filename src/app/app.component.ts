@@ -35,6 +35,7 @@ export class AppComponent implements OnInit {
 
   ) {}
 
+  // método parar criar um formulário reativo, adicionando validação dos campos e pegar a lista
   ngOnInit(): void {
     this.tarefaForm = this.formBuilder.group({
       id: [''],
@@ -47,6 +48,7 @@ export class AppComponent implements OnInit {
     this.getTarefasWithPagination();
   }
 
+  // método para aparecer mensagem ao criar/atualizar/deletar uma tarefa
   openSnackBar(msg: string) {
     this._snackBar.open(msg, 'X', {
       horizontalPosition: this.horizontalPosition,
@@ -55,6 +57,7 @@ export class AppComponent implements OnInit {
     });
   }
 
+  // método para chamar a o getTarefas do servcice e pegar os dados do banco de dados (igual para atualizar/deletar)
   getTarefasWithPagination(page = 0) {
     this.httpService
       .getTarefasWithPagination(page, this.size)
@@ -77,6 +80,7 @@ export class AppComponent implements OnInit {
     }
   }
 
+  // método para chamar a o delete do servcice e pegar os dados do banco de dados.
   deleteTarefa(id: number) {
     if (confirm('Tens certeza que queres deletar essa tarefa?')) {
       this.httpService.deleteTarefa(id).subscribe((data) => {
@@ -86,6 +90,7 @@ export class AppComponent implements OnInit {
     }
   }
 
+  // atualizar tarefa
   updateTarefa(tarefa: Tarefa) {
     this.httpService.updateTarefa(tarefa).subscribe((data) => {
       this.getTarefasWithPagination(this.pageNum);
@@ -95,12 +100,13 @@ export class AppComponent implements OnInit {
       });
     };
 
-
+  // editar tarefa
   handleEdit(tarefa: Tarefa) {
     this.isEditMode = true;
     this.tarefaForm.setValue(tarefa);
   }
 
+  // atualizar apenas a propridade FINALIZADO
   patchTarefaStatus(id: number, finalizadoStatus: boolean) {
     this.httpService.patchTarefaStatus(id, finalizadoStatus).subscribe((data) => {
       this.getTarefasWithPagination(this.pageNum);
@@ -108,6 +114,7 @@ export class AppComponent implements OnInit {
     });
   }
 
+  // função executada ao clicar o botão de submit do formulário
   onSubmit() {
     if (this.tarefaForm.invalid) {
       return;

@@ -1,3 +1,4 @@
+<!-- Nav de cabeçalho-->
 <nav class="inicio">
   Lista de Tarefas - Desafio Media4all
 </nav>
@@ -8,6 +9,7 @@
       <mat-card-title>Criar Tarefa</mat-card-title>
     </mat-card-header>
 
+    <!-- Formulário para criar as tarefas, utliznado a biblioteca FormGroup e ao clicar no enviar chama a função-->
     <form [formGroup]="tarefaForm" (ngSubmit)="onSubmit()">
       <table class="table" cellspacing="0">
         <tr>
@@ -64,6 +66,8 @@
     </form>
   </mat-card>
 
+
+  <!-- Tabela para a lista das tarefas -->
   <table class="table mt-5 align-middle">
     <thead>
       <tr>
@@ -76,6 +80,7 @@
       </tr>
     </thead>
 
+    <!-- Corpo da tabela com looping para receber a lista de tarefas-->
     <tbody class="table-group-divider">
       <tr *ngFor="let tarefa of tarefas">
         <td class="col-md-1">
@@ -89,6 +94,8 @@
         <td class="col-md-3">{{ tarefa.descricao }}</td>
         <td class="col-md-2">{{ tarefa.dataVencimento | date:"dd/MM/YYYY" }}</td>
         <td class="col-md-2">{{ tarefa.prioridade }}</td>
+
+        <!-- Botões de editar e deletar-->
         <td class="col-md-2">
           <button
             mat-icon-button
@@ -118,6 +125,7 @@
     </tbody>
   </table>
 
+  <!-- Nav para paginação da tabela -->
   <nav aria-label="Page navigation example" class="p-5 flex-center">
     <ul class="pagination">
       <ng-container>
