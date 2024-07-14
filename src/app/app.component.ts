@@ -92,13 +92,9 @@ export class AppComponent implements OnInit {
       this.tarefaForm.reset();
       this.openSnackBar(MESSAGE.UPDATE);
       this.isEditMode = false;
-      // Atualizar tarefa sem validação
-      this.tarefaForm.reset();
-      Object.keys(this.tarefaForm.controls).forEach(key => {
-        this.tarefaForm.controls[key].setErrors(null)
       });
-    });
-  }
+    };
+
 
   handleEdit(tarefa: Tarefa) {
     this.isEditMode = true;
@@ -131,14 +127,10 @@ export class AppComponent implements OnInit {
         this.generateAllPages(this.pageNum);
         this.openSnackBar(MESSAGE.CREATED);
         this.getTarefasWithPagination(this.pageNum);
-
-        //resetar sem validação
         this.tarefaForm.reset();
-        Object.keys(this.tarefaForm.controls).forEach(key => {
-          this.tarefaForm.controls[key].setErrors(null)
         });
-      });
-    }
+      };
   }
+
 }
 
