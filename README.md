@@ -1,31 +1,25 @@
-# listadetarefa
-Desafio media4all
+Lista de Tarefas Web App
 
-back-end (Springboot 3.3.1) está na branch main e o front-end (Angular 16) está na branch master.
+Desafio media4all - Projeto desenvolvido back-end (Springboot 3.3.1 e Java) está na branch main e o front-end (Angular 16) está na branch master.
 
+Como configurar e executar a aplicação
 
-Esse foi o banco de dados criado no MySQL Workbench:
+1 Primeiro crie um banco de dados no MySQL Workbench, esse é o script: https://github.com/thiagolyra1/listadetarefa/blob/main/scriptbd
+2 Clone o back-end que se encontra na branch main com esse comando: git clone -b main --single-branch https://github.com/thiagolyra1/listadetarefa.git.
+3 Importe o projeto na sua IDE de preferência (eu utilizei o IntelliJ IDEA Community).
+4 Faça o update do projeto maven. (No meu caso eu importei no IntelliJ e segui esses passo -> clicar com botão direito no pom.xm, no último campo tem "adicionar ao Maven", só clicar e vai da o update).
+5 Abra o arquivo "ListadetarefaApplication" (src/main/java/br.com.thiago.listadetarfa) e rode ele com o botão do play.
+6 Falta só clonar o front-end dessa aplicação, vá para esse link e leia o README: https://github.com/thiagolyra1/listadetarefa/tree/master
 
-CREATE USER 'tarefaapp'@'localhost' IDENTIFIED BY 'tarefaapp';
+<h1>Lista de Tarefas Web App</h1>
 
-GRANT ALL PRIVILEGES ON * . * TO 'tarefaapp'@'localhost';
-
-ALTER USER 'tarefaapp'@'localhost' IDENTIFIED WITH mysql_native_password BY 'tarefaapp';
-
-DROP DATABASE IF EXISTS `tarefa-app`;
-
-CREATE DATABASE `tarefa-app`;
-
-USE `tarefa-app` ;
-
-CREATE TABLE IF NOT EXISTS `tarefa-app`.`tarefa` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `titulo` VARCHAR(255) DEFAULT NULL,
-  `descricao` VARCHAR(255) DEFAULT NULL,
-  `finalizado` BIT DEFAULT 1,
-  `data_vencimento` DATETIME(6) DEFAULT NULL,
-  `prioridade` INT DEFAULT NULL,
-  PRIMARY KEY (`id`)
-)
-ENGINE=InnoDB
-AUTO_INCREMENT = 1;
+<p>Desafio media4all - Projeto desenvolvido back-end (Springboot 3.3.1 e Java) está na branch main e o front-end (Angular 16) está na branch master.</p>
+<h2>Como configurar e executar a aplicação</h2>
+<ol>
+  <li>Primeiro crie um banco de dados no MySQL Workbench, esse é o script: <a href="https://github.com/thiagolyra1/listadetarefa/blob/main/scriptbd" target="_blank">https://github.com/thiagolyra1/listadetarefa/blob/main/scriptbd</a></li>
+  <li>Clone o back-end que se encontra na branch main com esse comando: <code>git clone -b main --single-branch https://github.com/thiagolyra1/listadetarefa.git</code>.</li>
+  <li>Importe o projeto na sua IDE de preferência (eu utilizei o IntelliJ IDEA Community).</li>
+  <li>Faça o update do projeto maven. (No meu caso eu importei no IntelliJ e segui esses passos -> clicar com botão direito no <code>pom.xml</code>, no último campo tem "adicionar ao Maven", só clicar e vai dar o update).</li>
+  <li>Abra o arquivo "ListadetarefaApplication" (<code>src/main/java/br.com.thiago.listadetarfa</code>) e rode ele com o botão do play.</li>
+  <li>Falta só clonar o front-end dessa aplicação, vá para esse link e leia o README: <a href="https://github.com/thiagolyra1/listadetarefa/tree/master" target="_blank">https://github.com/thiagolyra1/listadetarefa/tree/master</a></li>
+</ol>
